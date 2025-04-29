@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import styles from "../../styles/case-study-card.module.css"
+import Image from "next/image";
 
 interface CaseStudyCardProps {
     category: string
@@ -21,7 +22,7 @@ export default function CaseStudyCard({ category, title, description, image}: Ca
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className={styles.imageContainer}>
-                <img src={image || ""} alt={title} style={{ objectFit: "cover", height:"100%", width:'100%'}} />
+                <Image width={100} height={100} src={image || ""} alt={title} style={{ objectFit: "cover", height:"100%", width:'100%'}} />
 
                 <div className={`${styles.overlay} ${isHovered ? styles.overlayExpanded : ""}`}>
                     <div className={styles.category}>{category}</div>

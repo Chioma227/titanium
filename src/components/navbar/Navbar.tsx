@@ -2,23 +2,25 @@ import styles from "../../styles/navbar.module.css"
 import { SlGlobe } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
 import { FaBars } from "react-icons/fa6";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     return (
         <div className={styles.navbarContainer}>
             <div className={styles.topNav}>
-                <a href="#" className={styles.navLink}>
+                <Link href="/" className={styles.navLink}>
                     Careers
-                </a>
-                <a href="#" className={styles.navLink}>
+                </Link>
+                <Link href="/" className={styles.navLink}>
                     News
-                </a>
-                <a href="#" className={styles.navLink}>
+                </Link>
+                <Link href="/" className={styles.navLink}>
                     Events
-                </a>
-                <a href="#" className={styles.navLink}>
+                </Link>
+                <Link href="/" className={styles.navLink}>
                     Investors
-                </a>
+                </Link>
                 <div className={styles.languageSelector}>
                     <span className={styles.globeIcon}>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,22 +52,22 @@ export default function Navbar() {
             <div className={styles.mainNav}>
                 <div className={styles.navLeft}>
                     <FaBars color="#000048" size={20} className={styles.barIcon} />
-                    <a href="/" className={styles.logo}>
-                        <img src="https://res.cloudinary.com/dswi7h0dg/image/upload/v1745932322/cognizant_bh2l5f.svg" alt="Cognizant Logo" width={200} height={30} />
-                    </a>
+                    <Link href="/" className={styles.logo}>
+                        <Image src="https://res.cloudinary.com/dswi7h0dg/image/upload/v1745932322/cognizant_bh2l5f.svg" alt="Cognizant Logo" width={200} height={30} />
+                    </Link>
                     <nav className={styles.navLinks}>
-                        <a href="#" className={styles.mainNavLink}>
+                        <Link href="/" className={styles.mainNavLink}>
                             Industries
-                        </a>
-                        <a href="#" className={styles.mainNavLink}>
+                        </Link>
+                        <Link href="/" className={styles.mainNavLink}>
                             Services
-                        </a>
-                        <a href="#" className={styles.mainNavLink}>
+                        </Link>
+                        <Link href="/" className={styles.mainNavLink}>
                             Insights
-                        </a>
-                        <a href="#" className={styles.mainNavLink}>
+                        </Link>
+                        <Link href="/" className={styles.mainNavLink}>
                             About
-                        </a>
+                        </Link>
                     </nav>
                 </div>
                 <div className={styles.searchContainer}>

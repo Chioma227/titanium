@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react"
 import styles from "../../styles/hero.module.css"
 import Navbar from "../navbar/Navbar";
 import { FiPlay } from "react-icons/fi";
+import Image from "next/image";
 
 // Define the tabs for the bottom section
 const tabs = ["Multi-agent services", "New minds, new markets", "Age of gen AI", "Cognizant Moment"]
@@ -36,7 +37,7 @@ export default function HeroSection() {
     const [currentImage, setCurrentImage] = useState(0)
     const [textState, setTextState] = useState("visible")
     const [currentText, setCurrentText] = useState(0)
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+    const [isAutoPlaying] = useState(true)
     const images = [
         "https://res.cloudinary.com/dswi7h0dg/image/upload/v1745930582/cognizant-4_dphmjq.webp",
         "https://res.cloudinary.com/dswi7h0dg/image/upload/v1745930582/cognizant-1_wgogyo.webp",
@@ -117,7 +118,8 @@ export default function HeroSection() {
                     <div className={styles.imageContainer}>
                         {images.map((src, index) => (
                             <div key={index} className={styles.imageWrapper} style={{ opacity: currentImage === index ? 1 : 0 }}>
-                                <img
+                                <Image
+                                width={100} height={100}
                                     src={src || "/placeholder.svg"}
                                     alt={`Hero image ${index + 1}`}
                                     style={{ objectFit: "cover", width: '100%', height: "100%" }}
