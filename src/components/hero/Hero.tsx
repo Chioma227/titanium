@@ -45,7 +45,7 @@ export default function HeroSection() {
     ]
 
     const clipPathRef = useRef<HTMLDivElement>(null)
-    const intervalRef = useRef<number | null>(null)
+    const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
     const changeSlide = (nextIndex: number) => {
         if (nextIndex === currentImage) return
