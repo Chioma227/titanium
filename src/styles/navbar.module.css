@@ -1,0 +1,131 @@
+.navbarContainer {
+    width: 100%;
+    background-color: white;
+  }
+  .barIcon{
+    display: none;
+  }
+  
+  .topNav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 8px 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .searchWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navLink:hover {
+    text-decoration: underline;
+  }
+  
+  .languageSelector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .globeIcon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+  .searchIconMobile{
+    display: none;
+}
+  @media (min-width: 1020px) {
+    .navLinks {
+      display: flex;
+      gap: 32px;
+    }
+   
+  }
+  @media (max-width: 1020px) {
+    .searchIconMobile{
+        display: block;
+        transform: translateY(-50%);
+        color: #9ca3af;
+    }
+    .searchContainer{
+        display: none;
+    }
+    .topNav{
+        display: none;
+    }
+    .barIcon{
+        display: block;
+    }
+    .navLeft {
+        gap: 0px;
+      }
+  }
+  
+  .mainNavLink {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+  }
+  
+  .mainNavLink:hover {
+    color: #0a0a5e;
+  }
+  
+  .searchContainer {
+    position: relative;
+  }
+  
+  .searchInput {
+    padding: 8px 16px;
+    padding-right: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    width: 256px;
+    outline: none;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    ring: 1px solid #0a0a5e;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+  }
+  

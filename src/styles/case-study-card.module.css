@@ -1,0 +1,104 @@
+.card {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    height: 320px;
+    width: 100%;
+  }
+  
+  .imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(10, 10, 94, 0.567);
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+    z-index: 2;
+  }
+  
+  .overlayExpanded {
+    height: 100%;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 3;
+    padding: 24px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  
+  .title {
+    color: #00ffff;
+    font-size: 24px;
+    font-weight: 600;
+    /* margin-bottom: 16px; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .arrow {
+    stroke: #00ffff;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .arrow {
+    transform: translateX(4px);
+  }
+  
+  .description {
+    font-size: 16px;
+    /* line-height: 1.5; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0.1s;
+    /* margin-top: auto; */
+  }
+  
+  .descriptionVisible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 1071px) {
+    .category {
+        margin-top: 15px;
+        margin-bottom: 12px;
+      }
+      
+      .title {
+        color: #00ffff;
+        font-size: 20px;
+      }
+      .overlay {
+        padding: 20px;
+      }
+  }
